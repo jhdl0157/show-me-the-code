@@ -1,6 +1,13 @@
 {
-  "name": "New Chrome Extension",
-  "description": "show me the code",
+  "name": "show me the code",
+  "description": "코딩 문제중 코드를 참고 하고 싶을때 버튼만 눌러주세요",
   "version": "1.0",
-  "manifest_version": 3
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["./contentScripts/style.css"],
+      "run_at": "document_start"
+    }
+  ]
 }
